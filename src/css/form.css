@@ -34,16 +34,35 @@ h1 {
 
   
   .btn {
-    padding: 10px 20px;
-    background-color: rgba(59, 63, 69, 0.962);
+    padding: 8px 20px;
+    width: 200px;
+    height: 50px;
     color: #fff;
+    background-color: #00fffb1c;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-weight: 800;
+    overflow: hidden;
+    position: relative;
     cursor: pointer;
   }
   
-  .btn:hover {
-    background-color: #2d313751;
+  .btn::before {
+content: "";
+top:0;
+left: 0;
+width: 100%;
+height: 100%;
+background:linear-gradient(120deg,transparent,#00fffc,transparent);
+transform: translateX(-100%);
+transition: 1s;
+position: absolute;
+  }
+  .btn:hover{
+    background: transparent;
+    box-shadow: 0 0 20px 5px #00fffc;
+  }
+  .btn:hover::before{
+    transform: translateX(100%);
   }
   
